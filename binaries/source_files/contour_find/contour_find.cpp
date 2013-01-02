@@ -6,9 +6,11 @@
 #include <string>
 #include <stdlib.h>
 #include <fstream>
-#include "new.hpp"
+#include "contour_find.hpp"
 using namespace std;
 using namespace cv;
+
+// Usage: display_image ImageToLoadAndDisplay cons thres scan_rate output_file
 
 Mat IMG;
 Mat IMGP;
@@ -161,8 +163,6 @@ int CountNonWhitePixelsInArea(Mat I, int x1, int y1, int x2, int y2){
     // Step 5: Compute sum
     sum = bot_r + top_l - top_r - bot_l;
 
-    //cout << sum << " - ";
-
     return sum;
 }
 
@@ -187,8 +187,6 @@ int CountNonWhitePixelsInAreaV2(Mat I, int x1, int y1, int x2, int y2){
 
     // Step 5: Compute sum
     sum = bot_r + top_l - top_r - bot_l;
-
-    //cout << sum << " - ";
 
     return sum;
 }
@@ -217,7 +215,6 @@ vector<int> ComputeColumnRegions(Mat I, int cons, int thres, int scan_rate){
 
         if (saved_sum > thres && sum == 0)
         {
-            cout <<endl << "saved_sum: " <<saved_sum << " sum: " << sum <<endl;
             col_boundries.push_back(x1+1);
         }
     }
@@ -275,9 +272,6 @@ vector<ImgPiece> CutUpImageVertically(ImgPiece piece, int cons, int thres, int s
 
         else if (saved_sum > thres && sum == 0)
         {
-            cout <<endl << "saved_sum: " <<saved_sum << " sum: " << sum <<endl;
-            cout << "shifting_pos: " << shifting_pos << endl<<endl;
-
             //Cut current image 'I' into two pieces
             Mat new_piece = I(Range(top, bottom), Range(left, shifting_pos_end));
 
@@ -339,9 +333,6 @@ vector<ImgPiece> CutUpImageHorizontally(ImgPiece piece, int cons, int thres, int
 
         else if (saved_sum > thres && sum == 0)
         {
-            cout <<endl << "saved_sum: " <<saved_sum << " sum: " << sum <<endl;
-            cout << "shifting_pos: " << shifting_pos << endl<<endl;
-
             //Cut current image 'I' into two pieces
             Mat new_piece = I(Range(top, shifting_pos_end), Range(left, right));
 
@@ -371,27 +362,29 @@ vector<ImgPiece> CutUpImageHorizontally(ImgPiece piece, int cons, int thres, int
 
 int main( int argc, char** argv )
 {
-    if( argc != 5)
+    if( argc != 6)
     {
-     cout <<" Usage: display_image ImageToLoadAndDisplay cons thres scan_rate" << endl;
+     cout <<"Usage: display_image ImageToLoadAndDisplay cons thres scan_rate output_file" << endl;
      return -1;
     }
 
-    cout << "hello world\n";
-
     Mat I;
-
+    Mat wboxes;
     vector<int> col_boundries;
     vector<ImgPiece> img_pieces; //create vector of image pieces to store the divided parts of the image.
     Point pt1;
     Point pt2;
     int cons, thres, scan_rate;
+    char* input_file;
+    char* output_file;
 
+    input_file = argv[1];
     cons = atoi(argv[2]);
     thres = atoi(argv[3]);
     scan_rate = atoi(argv[4]);
+    output_file = argv[5];
 
-    I = imread(argv[1], CV_LOAD_IMAGE_COLOR);
+    I = imread(input_file, CV_LOAD_IMAGE_COLOR);
     if (I.empty()){
         cout << "\nCannot open image!" << endl;
         exit(6);
@@ -401,12 +394,7 @@ int main( int argc, char** argv )
     IMGD = I;
     IMGP = PreProcIntegral(I);
 
-//-----------------------------------------------------------------
-        //version 1
-
     col_boundries = ComputeColumnRegions(PreProcIntegral(I), cons, thres, scan_rate);
-    cout << col_boundries.size();
-
 
     for (int i = 0; i < col_boundries.size(); ++i)
     {
@@ -414,15 +402,6 @@ int main( int argc, char** argv )
         pt2 = Point(col_boundries[i], I.rows);
         line(I, pt1, pt2, Scalar( 0, 0, 255 ));
     }
-
-    namedWindow( "Display window", CV_WINDOW_AUTOSIZE ); // Create a window for display.
-    imshow( "Display window", I );
-    // namedWindow( "Display win2dow", CV_WINDOW_AUTOSIZE ); // Create a window for display.
-    // imshow( "Display win2dow", PreProc(I) );                   // Show our image inside it.
-    waitKey(0);
-
-//-----------------------------------------------------------------
-        //version 2
 
 
     ImgPiece img_piece(PreProcIntegral(I), 0, 0, I.cols-1, I.rows-1); //create first piecie as whole image
@@ -432,10 +411,8 @@ int main( int argc, char** argv )
         img_pieces = CutUpImageHorizontally(img_piece, cons, thres, scan_rate);
     }
 
-    Mat wboxes;
-    namedWindow("result", CV_WINDOW_NORMAL);
     wboxes = DrawBoxes(IMG, img_pieces);
-    cvSaveImage("result.jpg", wboxes);
+    imwrite(output_file, wboxes);
 
     return 0;
 }
