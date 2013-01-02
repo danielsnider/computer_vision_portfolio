@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="quizit.js"></script>
+		<script type="text/javascript" charset="utf-8">
+		// var face_info = {
+		// "width":417 , "height":521 , "numfaces":1 , "faces": [{ "id":1 , "x":100 , "y":139 , "width":185 , "height":185 }]
+		// };
+		// 	var photo_path = '/uploads/da_queen.jpeg';
+		// 	$(function() {
+		// 		$("form").submit(function() {
+		// 			$(this).slideUp()
+		// 		})
+		// 	})
+		</script>
+  </head>
+  <body onload="loadScene()">
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>.<br /><strong>Do you want quiz it?</strong></p>
+
+		<form action="/" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			<p><input type="file" name="file" id="file"> <input type="submit" value="Continue &rarr;"></p>
+		</form>
+
+    <p>Welcome to <%= title %>.<br /><strong>Do you want quiz it2?</strong></p>
+
+        <form action="/contour_find" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Contour Find Algorithm</legend>
+                    <label for="file">Picture:</label>
+                    <input type="file" name="file" id="file"><br/>
+                    <label for="sep_dist">Minimum distance between objects considered seperate:</label>
+                    <input type="text" name="sep_dist" id="sep_dist"><br/>
+                    <!-- <label for="thres">noise tolerance:</label> -->
+                    <input type="hidden" name="thres" id="thres" value="0">
+                    <!-- <label for="scan_rate">Scanning window step rate:</label> -->
+                    <input type="hidden" name="scan_rate" id="scan_rate" value="1">
+                    <input type="submit" value="Continue &rarr;">
+            </fieldset>
+        </form>
+
+		<div id="world"></div>
+        <br>
+		<a href="https://github.com/danielsnider">we <strong>quiz</strong> opensource, 'coz we're into that kind of stuff.</a>
+  </body>
+</html>

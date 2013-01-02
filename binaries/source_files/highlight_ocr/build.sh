@@ -1,0 +1,1 @@
+g++ -g MyFuncs.cpp main.cpp `pkg-config --cflags opencv` `pkg-config --libs opencv` -lboost_system -lboost_filesystem 

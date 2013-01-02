@@ -1,0 +1,10 @@
+node_modules
+*.out*
+/public/uploads/*
+/public/uploads
+/uploads/da_queen.jpeg
+*.exe
+*.PNG
+*.png
+*.JPG
+*.jpg
