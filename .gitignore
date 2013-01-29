@@ -4,7 +4,6 @@ node_modules
 /public/uploads
 /uploads/da_queen.jpeg
 *.exe
-*.PNG
-*.png
-*.JPG
-*.jpg
+*.psd
+*.docx
+*.*~
