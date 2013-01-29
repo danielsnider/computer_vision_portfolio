@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="three.min.js"></script>
-	<script type="text/javascript" src="facebulge.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-	<script type="text/javascript" charset="utf-8">
-		var face_info = <%- face_info %>;
-		var photo_path = '<%- photo_path %>';
-	</script>
-  </head>
-  <body>
-    <h1><a href="/"><%= title %></a></h1>
-	<p class="error">There was an ERROR2 processing your bulge :(</p>
-    <p class="processing">Processing your bulge...</p>
-		<script type="text/javascript" charset="utf-8">
-		if(face_info) {
-			$("p.error").hide();
-			$("p.processing").show();
-			if(face_info.faces.length == 0) {
-				$("p.processing").text('sorry pal, we couldn\'t find any face bulge in your face. :(')
-			}
-		}
-		</script>
-	<div id="world"></div>
-    <img src="<%= photo_path %>" alt="result image" width="304" height="228">
-	<a href="https://github.com/j-v/FaceBulge">we <strong>bulge</strong> opensource, 'coz we're into that kind of stuff.</a>
-  </body>
+    <script type="text/javascript">
+    function close_window()
+    {
+      window.close();
+  }
+  </script>
+</head>
+<body>
+    <div class="work container">
+        <div class="row work_header">
+            <div class="result_title">
+                <%= title %>
+                <span class="close">—</span>
+                <a class="close" href="javascript:close_window();">close window</a>
+            </div>
+        </div>
+        <div class="row result_main center">
+            <div class="result_subtitle">Result</div>
+            <div class="result_text">A box is drawn for each contour.</div>
+            <img class="result_img" src="<%= photo_path %>" alt="result image">
+            <div class="result_subtitle">Source image</div>
+            <img class="result_img" src="<%= input_photo_path %>" alt="input image">
+        </div>
+    </div>
+</body>
 </html>

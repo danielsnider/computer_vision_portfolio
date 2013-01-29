@@ -1,0 +1,629 @@
+@import 'compass';
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+
+
+// Code taken from tutorial:
+// http://webcache.googleusercontent.com/search?q=cache:colorlabsproject.com/tutorials/create-css-grid-framework-with-compass/
+
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+//--------------------
+//
+// sass
+//
+//--------------------
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+$navcolor: rgba(51, 51, 51, 0.7) + 100;
+
+$dark-bg: #2E2E2E;
+$light-bg: white;
+$yellow-bg: #FF3;
+
+$dark-font: #2E2E2E;
+$light-font: white;
+$yellow-font: black;
+
+$agray: #575757;
+
+$font-nav: 'Istok Web', sans-serif;
+// $font-nav: Arial, Helvetica, sans-serif;
+$ethos-font: 'Istok Web', sans-serif;
+
+@mixin light-scheme {
+    background: $light-bg;
+    color: $dark-font;
+}
+
+@mixin dark-scheme {
+    background: $dark-bg;
+    color: $light-font;
+}
+
+@mixin yellow-scheme {
+    background: $yellow-bg;
+    color: $yellow-font;
+}
+
+//
+//Fonts
+//
+@font-face {
+  font-family: 'futura-med';
+  src: url('/fonts/Futura Medium BT.ttf');
+}
+@font-face {
+  font-family: 'futura-light';
+  src: url('/fonts/Futura Light BT.ttf');
+}
+@font-face {
+  font-family: 'legnsb';
+  src: url('/fonts/LEGSNB__.TTF');
+}
+@font-face {
+  font-family: 'legnsw';
+  src: url('/fonts/LEGSNSW_.TTF');
+}
+@font-face {
+  font-family: 'myriad-light';
+  src: url('/fonts/MyriadPro-LightSemiExt.otf');
+}
+@font-face {
+  font-family: 'myriad-semi';
+  src: url('/fonts/MyriadPro-SemiExt.otf');
+}
+@font-face {
+  font-family: 'sto';
+  src: url('/fonts/STOSFMI_.ttf');
+}
+@font-face {
+  font-family: 'gara';
+  src: url('/fonts/AGaramondPro-Italic.otf');
+}
+@font-face {
+  font-family: 'avan';
+  src: url('/fonts/AVANGELI.TTF');
+}
+
+@font-face {
+  font-family: 'bio';
+  src: url('/fonts/bio.otf');
+}
+//ChaparralPro-LightItCapt
+
+@font-face {
+  font-family: 'links';
+  src: url('/fonts/ChaparralPro-LightCapt.otf');
+}
+@font-face {
+  font-family: 'email';
+  src: url('/fonts/AVANGMB.TTF');
+}
+
+@font-face {
+  font-family: 'work';
+  src: url('/fonts/DINNeuzeitGrotesk-BoldCond-Regular.ttf');
+}
+
+$myriad-light-font: 'myriad-light', sans-serif;
+$myriad-semi-font: 'myriad-semi', sans-serif;
+$futura-light-font: 'futura-light', sans-serif;
+$futura-med-font: 'futura-med', sans-serif;
+$legnsb-font: 'legnsb', sans-serif;
+$legnsw-font: 'legnsw', sans-serif;
+$sto-font: 'sto', sans-serif;
+$gara-font: 'gara', sans-serif;
+$avan-font: 'avan', sans-serif;
+$bio-font: 'bio', sans-serif;
+$links-font: 'links', sans-serif;
+$email-font: 'email', sans-serif;
+$work-font: 'work', sans-serif;
+
+//--------------------
+//
+// major elements
+//
+//--------------------
+
+body {
+    font-family: $ethos-font;
+    background: $dark-bg;
+}
+
+a:link {
+    text-decoration:none;
+    color: black;
+}
+a:visited {
+    text-decoration:none;
+    color: black;
+}
+a:active {text-decoration:none;}
+
+@mixin container_title {
+    padding: 15px 0 10px 0;
+    @include adjust-font-size-to(65px);
+    text-transform: uppercase;
+    font-family: $avan-font;
+    font-weight: lighter;
+}
+
+.container_title {
+    @include container_title;
+}
+
+.container_desc {
+    margin-bottom: 60px;
+    // font-family: $gara-font;
+    font-family: $links-font;
+    @include adjust-font-size-to(20px);
+}
+
+@mixin left_divider {
+    position: relative;
+    width: 2000px;
+    height: 50px;
+    margin-left: -2015px;
+    float: left;
+    background: transparent url(/images/divider_left.gif) 0 0 no-repeat;
+}
+
+.left_divider {
+    @include left_divider;
+    top: 30px;
+}
+
+//--------------------
+//
+// -header
+//
+//--------------------
+
+.header {
+  @include yellow-scheme;
+  text-align: center;
+  @include adjust-font-size-to(20px);
+}
+.header_content {
+    padding: 100px 0 50px 0;
+}
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.bio {
+  margin: 0 10%;
+  font-family: $bio-font;
+  @include adjust-font-size-to(15px);
+}
+
+.links {
+    padding: 12px;
+    font-family: $links-font;
+    @include adjust-font-size-to(15px);
+    color: black;
+    a {
+        font-weight: bold;
+    }
+}
+
+.slash {
+    padding: 6px;
+    color: rgba(57, 57, 57, 0.6);
+}
+
+a.alink:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+//--------------------
+//
+// -work
+//
+//--------------------
+
+.work {
+    @include dark-scheme;
+}
+
+.work_item {
+    // -webkit-gradient(linear, left top, right top, from(white), to(#BFD6ED));
+    border-top: 1px solid #e8eef6;
+    padding: 50px 20px;
+    // background-color: #fdfdfc;
+    // @include box-shadow(rgba(gray, 0.2) 0 0 25px, rgba(yellow, 0.05) 0 0 3px 1px inset);
+}
+
+.work_item:last-child {
+    border-bottom: 0;
+}
+
+.left_divider_work_date {
+    @include left_divider;
+    top: 20px;
+}
+
+.work_date {
+    position: relative;
+    top: -20px;
+    left: -105px;
+    height: 0;
+    font-family: $avan-font;
+    @include adjust-font-size-to(30px);
+}
+
+.work_title {
+    @include adjust-font-size-to(40px);
+    font-family: $legnsb-font;
+}
+
+.work_desc {
+    font-family: sans-serif;
+    @include adjust-font-size-to(15px);
+    a {
+        color: #1996E8;
+        text-decoration: underline;
+    }
+}
+
+.work_form {
+    @include adjust-font-size-to(15px);
+    font-family: $myriad-light-font;
+    // font-family: $avan-font;
+    border: 1px solid gray;
+    padding: 3px 5px;
+    margin: 10px;
+    input[type=file] { width: 1px; }
+    box-sizing: content-box;
+}
+
+
+//--------------------
+//
+// -skills
+//
+//--------------------
+
+.skills {
+    @include yellow-scheme;
+}
+
+//--------------------
+//
+// -dates_section
+//
+//--------------------
+
+.dates {
+    @include yellow-scheme;
+}
+
+.dates_section {
+    padding: 0 40px 40px 40px;
+}
+
+.date_title {
+    font-family: $avan-font;
+    @include adjust-font-size-to(30px);
+
+}
+
+.date_desc {
+    font-family: $links-font;
+    @include adjust-font-size-to(20px);
+}
+
+.left_divider_date {
+    @include left_divider;
+    top: 20px;
+}
+
+.date {
+    position: relative;
+    top: -20px;
+    left: -105px;
+    height: 0;
+    font-family: $avan-font;
+    @include adjust-font-size-to(30px);
+}
+
+//--------------------
+//
+// -ethos
+//
+//--------------------
+
+.ethos {
+    @include light-scheme;
+}
+
+.ethos_item {
+    padding: 20px auto;
+    border-bottom: 1px solid #e8eef6;
+}
+
+.ethos_title {
+    @include adjust-font-size-to(26px);
+    padding: 14px;
+    font-family: $myriad-light-font;
+}
+
+.ethos_desc {
+    @include adjust-font-size-to(18px);
+    font-family: $myriad-light-font;
+    padding: 28px;
+}
+
+.ethos_item:last-child {
+    border-bottom: 0;
+}
+
+//--------------------
+//
+// -goals
+//
+//--------------------
+
+.goals {
+    @include light-scheme;
+}
+
+.x {
+  text-align: center;
+  font-size: 60px;
+  margin: 30px auto;
+  color: rgba(0, 0, 0, 0.33);
+  font-family: times
+}
+
+.goals_title {
+    @include container_title;
+    @include adjust-font-size-to(45px);
+    padding: 15px 0 0 0;
+}
+
+
+//--------------------
+//
+// -contact
+//
+//--------------------
+
+.contact {
+    @include dark-scheme;
+}
+
+.contact_logo {
+    float: right;
+    color: white;
+}
+
+.contact_desc {
+    margin-bottom: 20px;
+    font-family: $links-font;
+    @include adjust-font-size-to(20px);
+}
+
+.action {
+    text-transform: uppercase;
+    font-family: $futura-med-font;
+    @include adjust-font-size-to(60px);
+}
+.action_item {
+    padding: 0 12px;
+}
+.action_div {
+    opacity: .5;
+    @include adjust-font-size-to(10px);
+}
+
+.action_sml {
+    @include adjust-font-size-to(5px);
+}
+
+a.left {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.center {
+    text-align: center;
+}
+
+a.right {
+    float: right;
+    margin-right: 10%;
+}
+
+a.action_item:link {
+    text-decoration:none;
+    color: white;
+}
+a.action_item:visited {
+    text-decoration:none;
+    color: white;
+}
+a.action_item:hover {
+    opacity: .5;
+    // text-decoration: underline;
+}
+
+//--------------------
+//
+// footer
+//
+//--------------------
+
+.footer {
+    background: black;
+}
+
+.footer_content {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.headshot_img {
+    opacity: .7;
+    transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+}
+.contact_email {
+    font-family: $bio-font;
+    position: relative;
+    top: -50px;
+    @include adjust-font-size-to(27px);
+}
+
+.arrow {
+    position: relative;
+    top: -65px;
+    // left: 20px;
+    // opacity: .5;
+}
+
+.footer_text {
+    color: #575757 + 130;
+    margin: 20px auto;
+    font-family: $bio-font;
+    @include adjust-font-size-to(22px);
+}
+
+.footer_text_cont {
+    color: #575757 + 50;
+}
+
+.headshot_img:hover {
+    opacity: 1;
+}
+
+a.contact_email:link {
+    text-decoration:none;
+    color: white;
+}
+a.contact_email:visited {
+    text-decoration:none;
+    color: white;
+}
+a.contact_email:hover {
+    opacity: .5;
+}
+
+
+//--------------------
+//
+// nav bar
+//
+//--------------------
+
+div#navbar {
+    height: 40px;
+    width: 100%;
+    border-top: solid #000 1px;
+    border-bottom: solid #000 1px;
+    text-align: center;
+    @include contrasted($navcolor);
+    top: 0px;
+    position: fixed;
+    z-index: 999;
+}
+
+div#navbar ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: $myriad-light-font;
+    font-size: medium;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+div#navbar li {
+    list-style-type: none;
+    display: inline;
+}
+
+div#navbar li a {
+    text-decoration: none;
+    padding: 7px 6%;
+    @include unstyled-link;
+}
+
+div#navbar li a:hover {
+    font-weight: bold;
+    /*background-color: $navcolor + 60;*/
+    /*@include radial-gradient(color-stops(#c00, #00c));*/
+    @include background-image(radial-gradient($navcolor - 50 , $navcolor + 50));
+}
+
+// $('.thing').waypoint(function(direction) {
+//   alert('Top of thing hit top of viewport.');
+// });
+
+
+//--------------------
+//
+// nav bar
+//
+//--------------------
+
+
+.center {
+  display: block;
+  margin: auto;
+}
+
+a.close {
+    color: $light-font;
+    text-decoration: underline;
+}
+
+.close {
+    @include container_title;
+    font-size: 30px;
+}
+
+a.close:hover {
+    color: $yellow-bg;
+}
+
+.result_main {
+    border-top: 1px solid #e8eef6;
+}
+
+.result_title {
+    @include container_title;
+    text-align: center;
+}
+
+.result_text {
+    margin: auto 8%;
+    padding-bottom: 20px;
+    font-family: $myriad-light-font;
+    white-space:pre-line;
+}
+
+
+.result_subtitle {
+    padding: 40px 0 10px 0;
+    @include adjust-font-size-to(35px);
+    text-transform: uppercase;
+    font-family: $avan-font;
+    font-weight: lighter;
+    color: $yellow-bg;
+}
+.result_img {
+    width: 70%;
+    max-width: 700px;
+}
+
+.close_bottom {
+    padding: 30px;
+}

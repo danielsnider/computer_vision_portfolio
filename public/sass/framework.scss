@@ -1,0 +1,91 @@
+/* Import compass reset module */
+@import "compass";
+
+/* Import reset module */
+@import "compass/reset";
+$ethos-font: 'Istok Web', sans-serif;
+
+/* Grid Layout Variables */
+$containerWidth :   978px;
+$columnWidth :      5.5; //In percent
+$column :           12; //Twelve columns
+$columnGutter   : (100 - ($columnWidth * $column)) / ($column - 1);
+
+/* Flexible image */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 100px;
+  position: relative;
+  @include pie-clearfix;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  /* If you need different container width, you can easily
+   change $containerWidth variable; */
+  max-width: $containerWidth;
+  @include pie-clearfix;
+}
+
+ /*Select all element that contains class 'col' */
+[class*="col"] {
+  float: left;
+  display: inline;
+  min-height: 1px;
+  position: relative;
+  margin-left: 1% * $columnGutter;
+  /*Get rid of margin from first column*/
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+
+@for $i from 1 through $column {
+  .col#{$i} {
+    $colWidth: 1% * ($columnWidth * $i) + ($columnGutter *($i - 1));
+    width: $colWidth;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+.row {
+  max-width: 767px;
+    [class*="col"] {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+// Use with html like so:
+ //
+ // <div class="row">
+ //    <h1 class="page-heading">Example</h1>
+ //  </div>
+
+ //  <div class="row">
+ //    <div class="col12">col12</div>
+ //  </div>
+
+ //  <div class="row">
+ //    <div class="col1">col1</div>
+ //    <div class="col10">col10</div>
+ //    <div class="col1">col1</div>
+ //  </div>
+ //
+ // more html at:
+ // view-source:http://mambows.github.com/simple-compass-css/
+ // http://mambows.github.com/simple-compass-css/
+ //
+ // more info at:
+ // https://github.com/mambows/simple-compass-css
+ // http://www.mattdempsey.com/#about-contact
+
