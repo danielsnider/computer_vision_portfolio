@@ -23,8 +23,12 @@
         <div class="row result_main center">
             <div class="result_subtitle">Result</div>
             <div class="result_text"><%= OCR_text %></div>
+            <div><a class="close" href="/uploads/output.csv">output.csv</a></div>
             <div class="result_subtitle">Source image</div>
             <img class="result_img" src="<%= input_photo_path %>" alt="input image">
+            <div class="close_bottom">
+                <a class="close" href="javascript:close_window();">close window</a>
+            </div>
         </div>
     </div>
 </body>

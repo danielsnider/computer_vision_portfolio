@@ -59,35 +59,6 @@ exports.contour_find = function(req, res) {
   });
 };
 
-exports.quiz_it = function(req, res) {
-  process.chdir(binaries_path);
-
-  var orig_file_name = req.files.file.name;
-  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
-  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
-
-  var input_photo = "../public/uploads/" + new_file_name;
-  var orig_display_photo = "/uploads/" + new_file_name;
-
-  if (orig_file_name == '')
-  {
-    input_photo = "../public/images/quiz_it.png";
-    orig_display_photo = "/images/quiz_it.png";
-  }
-
-  command = './quiz_it.out' + ' "' + input_photo + '"';
-  child = exec(command,
-    function (error, stdout, stderr) {
-      var result_text = stdout;
-      res.render('quiz_it_uploaded', { title: 'Quiz It', input_photo_path: orig_display_photo, OCR_text: result_text});
-      if (error !== null) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        console.log('exec error: ' + error);
-      }
-  });
-};
-
 exports.empty_wall_space = function(req, res) {
   process.chdir(binaries_path);
 
@@ -127,6 +98,7 @@ exports.highlight_ocr = function(req, res) {
 
   var input_photo = "../public/uploads/" + new_file_name;
   var orig_display_photo = "/uploads/" + new_file_name;
+  var csv_path = "/uploads/output.csv";
 
   if (orig_file_name == '')
   {
@@ -138,7 +110,36 @@ exports.highlight_ocr = function(req, res) {
   child = exec(command,
     function (error, stdout, stderr) {
       var result_text = stdout;
-      res.render('highlight_ocr_uploaded', { title: 'Highlights only OCR', input_photo_path: orig_display_photo, OCR_text: result_text});
+      res.render('highlight_ocr_uploaded', { title: 'Highlights only OCR', input_photo_path: orig_display_photo, OCR_text: result_text, csv_file: csv_path});
+      if (error !== null) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        console.log('exec error: ' + error);
+      }
+  });
+};
+
+exports.quiz_it = function(req, res) {
+  process.chdir(binaries_path);
+
+  var orig_file_name = req.files.file.name;
+  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
+  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+
+  var input_photo = "../public/uploads/" + new_file_name;
+  var orig_display_photo = "/uploads/" + new_file_name;
+
+  if (orig_file_name == '')
+  {
+    input_photo = "../public/images/quiz_it.png";
+    orig_display_photo = "/images/quiz_it.png";
+  }
+
+  command = './quiz_it.out' + ' "' + input_photo + '"';
+  child = exec(command,
+    function (error, stdout, stderr) {
+      var result_text = stdout;
+      res.render('quiz_it_uploaded', { title: 'Quiz It', input_photo_path: orig_display_photo, OCR_text: result_text});
       if (error !== null) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
