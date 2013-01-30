@@ -13,6 +13,9 @@ Program depenencies: OpenCV, Tesseract
 
 void QuizEye(char* arg)
 {
+  //Init env
+  system("rm ../public/uploads/output.csv");
+
   // Load image and filename into object
   MyImage my_im(arg);
 
