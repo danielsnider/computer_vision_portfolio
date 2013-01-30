@@ -549,6 +549,7 @@ void OCRtoStdOut(Vector<Mat> img_pieces) {
 //Perform OCR on all given images
 
   std::vector<string> lines;
+  ofstream out;
 
   // Step 1: execute tesseract OCR on 'img_pieces', store text in 'lines'
   for (int i = 0; i < img_pieces.size(); ++i)
@@ -556,11 +557,15 @@ void OCRtoStdOut(Vector<Mat> img_pieces) {
     lines.push_back(TesseractLine(img_pieces[i]));
   }
 
-  // Step 2: print OCR'ed text
+  // Step 2: print and save OCR'ed text
+  out.open("../public/uploads/output.csv");
   for (int i = 0; i < img_pieces.size()/2; ++i)
   {
     cout << lines[i] << " <---> " << lines[i + img_pieces.size()/2] << endl;
+    out << lines[i] << "," << lines[i + img_pieces.size()/2] << endl;
   }
+
+  out.close();
 
   //   Note about definition structure:
   //-In a given image, terms are assumed to all be in a left column, their definitons in a right column.
