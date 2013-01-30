@@ -182,7 +182,7 @@ a:active {
 
 /* line 160, ../sass/style.scss */
 .container_desc {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-family: "links", sans-serif;
   font-size: 1.25em;
   line-height: 1.2em;
@@ -196,7 +196,7 @@ a:active {
   margin-left: -2015px;
   float: left;
   background: transparent url(/images/divider_left.gif) 0 0 no-repeat;
-  top: 30px;
+  top: 46px;
 }
 
 /* line 187, ../sass/style.scss */
@@ -330,32 +330,50 @@ a.alink:hover {
   color: black;
 }
 
-/* line 305, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
+.skills_graph {
+  margin-bottom: 24px;
+  margin-right: 10px;
+}
+
+/* line 304, ../sass/style.scss */
+.left_divider_skills {
+  position: relative;
+  width: 2000px;
+  height: 50px;
+  margin-left: -2015px;
+  float: left;
+  background: transparent url(/images/divider_left.gif) 0 0 no-repeat;
+  top: 16px;
+  margin-left: -1995px;
+}
+
+/* line 315, ../sass/style.scss */
 .dates {
   background: #ffff33;
   color: black;
 }
 
-/* line 309, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .dates_section {
   padding: 0 40px 40px 40px;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .date_title {
   font-family: "avan", sans-serif;
   font-size: 1.875em;
   line-height: 1.6em;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .date_desc {
   font-family: "links", sans-serif;
   font-size: 1.25em;
   line-height: 1.2em;
 }
 
-/* line 324, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 .left_divider_date {
   position: relative;
   width: 2000px;
@@ -363,10 +381,10 @@ a.alink:hover {
   margin-left: -2015px;
   float: left;
   background: transparent url(/images/divider_left.gif) 0 0 no-repeat;
-  top: 20px;
+  top: 40px;
 }
 
-/* line 329, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .date {
   position: relative;
   top: -20px;
@@ -377,19 +395,19 @@ a.alink:hover {
   line-height: 1.6em;
 }
 
-/* line 344, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 .ethos {
   background: white;
   color: #2e2e2e;
 }
 
-/* line 348, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .ethos_item {
   padding: 20px auto;
   border-bottom: 1px solid #e8eef6;
 }
 
-/* line 353, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .ethos_title {
   font-size: 1.625em;
   line-height: 1.84615em;
@@ -397,7 +415,7 @@ a.alink:hover {
   font-family: "myriad-light", sans-serif;
 }
 
-/* line 359, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 .ethos_desc {
   font-size: 1.125em;
   line-height: 1.33333em;
@@ -405,18 +423,18 @@ a.alink:hover {
   padding: 28px;
 }
 
-/* line 365, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 .ethos_item:last-child {
   border-bottom: 0;
 }
 
-/* line 375, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 .goals {
   background: white;
   color: #2e2e2e;
 }
 
-/* line 379, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .x {
   text-align: center;
   font-size: 60px;
@@ -425,7 +443,7 @@ a.alink:hover {
   font-family: times;
 }
 
-/* line 387, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .goals_title {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -438,19 +456,19 @@ a.alink:hover {
   padding: 15px 0 0 0;
 }
 
-/* line 400, ../sass/style.scss */
+/* line 410, ../sass/style.scss */
 .contact {
   background: #2e2e2e;
   color: white;
 }
 
-/* line 404, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .contact_logo {
   float: right;
   color: white;
 }
 
-/* line 409, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .contact_desc {
   margin-bottom: 20px;
   font-family: "links", sans-serif;
@@ -458,7 +476,7 @@ a.alink:hover {
   line-height: 1.2em;
 }
 
-/* line 415, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .action {
   text-transform: uppercase;
   font-family: "futura-med", sans-serif;
@@ -466,77 +484,77 @@ a.alink:hover {
   line-height: 1.2em;
 }
 
-/* line 420, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .action_item {
   padding: 0 12px;
 }
 
-/* line 423, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .action_div {
   opacity: .5;
   font-size: 0.625em;
   line-height: 2.4em;
 }
 
-/* line 428, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
 .action_sml {
   font-size: 0.3125em;
   line-height: 4.8em;
 }
 
-/* line 432, ../sass/style.scss */
+/* line 442, ../sass/style.scss */
 a.left {
   text-align: left;
   margin-left: 10%;
 }
 
-/* line 437, ../sass/style.scss */
+/* line 447, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 441, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 a.right {
   float: right;
   margin-right: 10%;
 }
 
-/* line 446, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 a.action_item:link {
   text-decoration: none;
   color: white;
 }
 
-/* line 450, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 a.action_item:visited {
   text-decoration: none;
   color: white;
 }
 
-/* line 454, ../sass/style.scss */
+/* line 464, ../sass/style.scss */
 a.action_item:hover {
   opacity: .5;
 }
 
-/* line 465, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .footer {
   background: black;
 }
 
-/* line 469, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .footer_content {
   text-align: center;
   padding-top: 30px;
 }
 
-/* line 474, ../sass/style.scss */
+/* line 484, ../sass/style.scss */
 .headshot_img {
   opacity: .7;
   transition: opacity 0.3s ease-out;
   -webkit-transition: opacity 0.3s ease-out;
 }
 
-/* line 479, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .contact_email {
   font-family: "bio", sans-serif;
   position: relative;
@@ -545,13 +563,13 @@ a.action_item:hover {
   line-height: 1.77778em;
 }
 
-/* line 486, ../sass/style.scss */
+/* line 496, ../sass/style.scss */
 .arrow {
   position: relative;
   top: -65px;
 }
 
-/* line 493, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .footer_text {
   color: #d9d9d9;
   margin: 20px auto;
@@ -560,48 +578,48 @@ a.action_item:hover {
   line-height: 2.18182em;
 }
 
-/* line 500, ../sass/style.scss */
+/* line 510, ../sass/style.scss */
 .footer_text_cont {
   color: #898989;
 }
 
-/* line 504, ../sass/style.scss */
+/* line 514, ../sass/style.scss */
 .headshot_img:hover {
   opacity: 1;
 }
 
-/* line 508, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 a.contact_email:link {
   text-decoration: none;
   color: white;
 }
 
-/* line 512, ../sass/style.scss */
+/* line 522, ../sass/style.scss */
 a.contact_email:visited {
   text-decoration: none;
   color: white;
 }
 
-/* line 516, ../sass/style.scss */
+/* line 526, ../sass/style.scss */
 a.contact_email:hover {
   opacity: .5;
 }
 
-/* line 527, ../sass/style.scss */
+/* line 537, ../sass/style.scss */
 div#navbar {
   height: 40px;
   width: 100%;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
   text-align: center;
-  background-color: rgba(151, 151, 151, 0.7);
+  background-color: rgba(151, 151, 151, 0.6);
   color: black;
   top: 0px;
   position: fixed;
   z-index: 999;
 }
 
-/* line 539, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 div#navbar ul {
   margin: 0px;
   padding: 0px;
@@ -611,13 +629,15 @@ div#navbar ul {
   white-space: nowrap;
 }
 
-/* line 548, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 div#navbar li {
   list-style-type: none;
   display: inline;
+  font-size: 1.0625em;
+  line-height: 1.41176em;
 }
 
-/* line 553, ../sass/style.scss */
+/* line 564, ../sass/style.scss */
 div#navbar li a {
   text-decoration: none;
   padding: 7px 6%;
@@ -630,31 +650,26 @@ div#navbar li a:active, div#navbar li a:focus {
   outline: none;
 }
 
-/* line 559, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 div#navbar li a:hover {
   font-weight: bold;
-  /*background-color: $navcolor + 60;*/
+  background-color: rgba(211, 211, 211, 0.6);
   /*@include radial-gradient(color-stops(#c00, #00c));*/
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(101, 101, 101, 0.7)), color-stop(100%, rgba(201, 201, 201, 0.7)));
-  background-image: -webkit-radial-gradient(rgba(101, 101, 101, 0.7), rgba(201, 201, 201, 0.7));
-  background-image: -moz-radial-gradient(rgba(101, 101, 101, 0.7), rgba(201, 201, 201, 0.7));
-  background-image: -o-radial-gradient(rgba(101, 101, 101, 0.7), rgba(201, 201, 201, 0.7));
-  background-image: radial-gradient(rgba(101, 101, 101, 0.7), rgba(201, 201, 201, 0.7));
 }
 
-/* line 578, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .center {
   display: block;
   margin: auto;
 }
 
-/* line 583, ../sass/style.scss */
+/* line 595, ../sass/style.scss */
 a.close {
   color: white;
   text-decoration: underline;
 }
 
-/* line 588, ../sass/style.scss */
+/* line 600, ../sass/style.scss */
 .close {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -665,17 +680,17 @@ a.close {
   font-size: 30px;
 }
 
-/* line 593, ../sass/style.scss */
+/* line 605, ../sass/style.scss */
 a.close:hover {
   color: #ffff33;
 }
 
-/* line 597, ../sass/style.scss */
+/* line 609, ../sass/style.scss */
 .result_main {
   border-top: 1px solid #e8eef6;
 }
 
-/* line 601, ../sass/style.scss */
+/* line 613, ../sass/style.scss */
 .result_title {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -686,7 +701,7 @@ a.close:hover {
   text-align: center;
 }
 
-/* line 606, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .result_text {
   margin: auto 8%;
   padding-bottom: 20px;
@@ -694,7 +709,7 @@ a.close:hover {
   white-space: pre-line;
 }
 
-/* line 614, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .result_subtitle {
   padding: 40px 0 10px 0;
   font-size: 2.1875em;
@@ -705,13 +720,13 @@ a.close:hover {
   color: #ffff33;
 }
 
-/* line 622, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .result_img {
   width: 70%;
   max-width: 700px;
 }
 
-/* line 627, ../sass/style.scss */
+/* line 639, ../sass/style.scss */
 .close_bottom {
   padding: 30px;
 }
