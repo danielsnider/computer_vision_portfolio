@@ -4,12 +4,12 @@
     <title><%= title %></title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script type="text/javascript">
-    function close_window()
-    {
-      window.close();
-  }
-  </script>
+        <script type="text/javascript">
+        function close_window()
+        {
+          window.close();
+      }
+      </script>
 </head>
 <body>
     <div class="work container">
@@ -26,6 +26,9 @@
             <img class="result_img" src="<%= photo_path %>" alt="result image">
             <div class="result_subtitle">Source image</div>
             <img class="result_img" src="<%= input_photo_path %>" alt="input image">
+            <div class="close_bottom">
+                <a class="close" href="javascript:close_window();">close window</a>
+            </div>
         </div>
     </div>
 </body>
