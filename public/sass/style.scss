@@ -135,6 +135,10 @@ body {
     background: $dark-bg;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 a:link {
     text-decoration:none;
     color: black;
@@ -266,6 +270,7 @@ a.alink:hover {
 }
 
 .work_desc {
+    margin: 6px 0px;
     font-family: sans-serif;
     @include adjust-font-size-to(15px);
     a {
@@ -285,7 +290,17 @@ a.alink:hover {
     box-sizing: content-box;
 }
 
+.sep_dist {
+    font-size: 12px;
+}
 
+.rgb {
+    font-size: 13px;
+}
+
+#rgb_title {
+    text-decoration: underline;
+}
 //--------------------
 //
 // -skills
@@ -356,7 +371,8 @@ a.alink:hover {
 }
 
 .ethos_item {
-    padding: 20px auto;
+    padding-bottom: 20px;
+    padding: 0 auto;
     border-bottom: 1px solid #e8eef6;
 }
 
