@@ -7,3 +7,4 @@ node_modules
 *.psd
 *.docx
 *.*~
+/binaries/backup
