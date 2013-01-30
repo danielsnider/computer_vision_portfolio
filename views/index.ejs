@@ -31,6 +31,21 @@
 	  		$('#uploadme').click();
 	  	});
 	  });
+	  $(function(){
+	  	$('#clickme2').click(function(){
+	  		$('#uploadme2').click();
+	  	});
+	  });
+	  $(function(){
+	  	$('#clickme3').click(function(){
+	  		$('#uploadme3').click();
+	  	});
+	  });
+	  $(function(){
+	  	$('#clickme4').click(function(){
+	  		$('#uploadme4').click();
+	  	});
+	  });
 	  </script>
 	</head>
 	<body>
@@ -61,7 +76,7 @@
 							<img src="/images/hello.png" height="300" width="300">
 						</div>
 						<div class="bio">
-							<p>I am a self-driven student of computer vision and machine learning living near Toronto. On the side of university, I have taught myself OpenCV and have completed a Stanford University online course on machine learning. I graduate in May and will focus full-time on working with computer vision and machine learning. I am available for hire or for an unpaid project. Previously I worked at IBM and the Google Summer of Code. Also, I am a radical optimist and I love rock climbing and fire spinning.</p>
+							<p>I am a self-driven student of computer vision and machine learning living near Toronto. On the side of university, I have taught myself OpenCV and have completed a Stanford University online course on machine learning. I graduate in May and will focus full-time on computer vision and machine learning. Previously I worked at IBM and the Google Summer of Code. Also, I am a radical optimist, and I love rock climbing and fire spinning.</p>
 						</div>
 						<div class="links">
 							<span class="pretext">You can find me in all the usual places</span>
@@ -91,17 +106,18 @@
 						<h2 class="work_title">Contour Finding Algorithm</h2>
 						<p class="work_desc">This algorithm “groups” nearby darkish pixels by a minimum distance. Each group's bounderies (i.e. contour) can be accessed programmatically. Only rectangular contours are supported due to the split and merge implementation style. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
 						<form class="work_form" action="/contour_find" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
-							<label for="file">Try your own picture:</label>
+							<label for="file">Upload your own picture:</label>
 							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
-							<input type="button" id="clickme" value="Choose File" /><br>
-							<label for="sep_dist">Min pixel distance between objects:</label>
+							<input type="button" id="clickme" value="Choose File" />
+							<input type="submit" value="Go &rarr;"><br>
+							<label for="file">Or try the default picture:</label>
+							<input type="submit" value="Continue &rarr;"><br>
+							<label for="sep_dist" class="sep_dist">Minimum pixel distance between objects:</label>
 							<input type="text" name="sep_dist" id="sep_dist" value="25" size="10"><br/>
 							<!-- <label for="thres">noise tolerance:</label> -->
 							<input type="hidden" name="thres" id="thres" value="0">
 							<!-- <label for="scan_rate">Scanning window step rate:</label> -->
 							<input type="hidden" name="scan_rate" id="scan_rate" value="1">
-							<label for="file">Continue with default:</label>
-							<input type="submit" value="Continue &rarr;">
 						</form>
 					</div>
 
@@ -146,11 +162,13 @@
 					</div>
 					<div class="left_col col5">
 						<h2 class="work_title">Empty Wall Space</h2>
-						<p class="work_desc">This algorithm “groups” nearby darkish pixels by a minimum distance. Each group's bounderies (i.e. contour) can be accessed programmatically. Only rectangular contours are supported due to the split and merge implementation style. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours">findContours</a>.</p>
+						<p class="work_desc">This algorithm finds the largest unobstructed area. Potential applications include an intelligent wall projectors or head-mounted displays.</p>
 						<form class="work_form" action="/empty_wall_space" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
-							<label for="file">Try your own picture:</label>
-							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
-							<input type="button" id="clickme" value="Choose File" /><br>
+							<label for="file">Upload your own picture:</label>
+							<input type="file" name="file" style="visibility:hidden;" id="uploadme2" />
+							<input type="button" id="clickme2" value="Choose File" />
+							<input type="submit" value="Go &rarr;"><br>
+							<label for="file">Or try the default picture:</label>
 							<input type="submit" value="Continue &rarr;">
 						</form>
 					</div>
@@ -159,18 +177,21 @@
 				<div class="row work_item">
 					<div class="left_col col5">
 						<h2 class="work_title">Highlights only OCR</h2>
-						<p class="work_desc">This algorithm “groups” nearby darkish pixels by a minimum distance. Each group's bounderies (i.e. contour) can be accessed programmatically. Only rectangular contours are supported due to the split and merge implementation style. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours">findContours</a>.</p>
+						<p class="work_desc">This algorithm performs OCR <b class="bold">only</b> on text that has been highlighted. Amazon's Kindle app for mobile devices allows text to be highlighted, but frustratingly, restricts copy and pasting. However, Amazon offers a solution if you log onto their website and go to the "Your Highlights" section of your account.</p>
 						<form class="work_form" action="/highlight_ocr" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
-							<label for="file">Try your own picture:</label>
-							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
-							<input type="button" id="clickme" value="Choose File" /><br>
-							<label for="red">Red:</label>
-							<input type="text" name="red" id="red" value="251"><br/>
-							<label for="green">Green:</label>
-							<input type="text" name="green" id="green" value="226">
-							<label for="blue">Blue:</label>
-							<input type="text" name="blue" id="blue" value="152">
-							<input type="submit" value="Continue &rarr;">
+							<label for="file">Upload your own picture:</label>
+							<input type="file" name="file" style="visibility:hidden;" id="uploadme3" />
+							<input type="button" id="clickme3" value="Choose File" />
+							<input type="submit" value="Go &rarr;"><br>
+							<label for="file">Or try the default picture:</label>
+							<input type="submit" value="Continue &rarr;"><br>
+							<div class="rgb" id="rgb_title">Highlight Color</div>
+							<label class="rgb" for="red">Red:</label>
+							<input class="rgb" type="text" name="red" id="red" value="251"><br/>
+							<label class="rgb" for="green">Green:</label>
+							<input class="rgb" type="text" name="green" id="green" value="226"><br>
+							<label class="rgb" for="blue">Blue:</label>
+							<input class="rgb" type="text" name="blue" id="blue" value="152">
 						</form>
 					</div>
 					<div class="center_col col7">
@@ -213,10 +234,13 @@
 					</div>
 					<div class="left_col col5">
 						<h2 class="work_title">Quiz It</h2>
-						<p class="work_desc">This algorithm “groups” nearby darkish pixels by a minimum distance. Each group's bounderies (i.e. contour) can be accessed programmatically. Only rectangular contours are supported due to the split and merge implementation style. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours">findContours</a>.</p>
-						<form class="work_form" action="/quiz_it" method="post" accept-charset="utf-8" enctype="multipart/form-data" targe<label for="file">Try your own picture:</label>
-							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
-							<input type="button" id="clickme" value="Choose File" /><br>
+						<p class="work_desc">I needed a better way to learn my German vocabulary homework, so I created a program to perform structured OCR on two columns of text, in the hopes of automatically generating practice tests. The text in the image is converted into a spreadsheet which can be imported into Anki, a self-quizzing tool.</p>
+						<form class="work_form" action="/quiz_it" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
+							<label for="file">Upload your own picture:</label>
+							<input type="file" name="file" style="visibility:hidden;" id="uploadme4" />
+							<input type="button" id="clickme4" value="Choose File"/>
+							<input type="submit" value="Go &rarr;"><br>
+							<label for="file">Or try the default picture:</label>
 							<input type="submit" value="Continue &rarr;">
 						</form>
 					</div>
@@ -283,10 +307,6 @@
 					<div class="container_title">Ethos</div>
 				</div>
 				<div class="ethos_item row">
-					<div class="ethos_title col4"><del>Publish</del> get shit done or parish</div>
-					<div class="ethos_desc col8">Use the best research to make the best products.</br></div>
-				</div>
-				<div class="ethos_item row">
 					<div class="ethos_title col4">Throw ideas away</div>
 					<div class="ethos_desc col8">"90% of everything we create, draw, or think of will be thrown away — by choice. That’s just as it should be. Only the best ideas can survive." — Pixar</div>
 				</div>
@@ -299,12 +319,12 @@
 					<div class="ethos_desc col8">If you have to choose between clear and clever, choose clear.</div>
 				</div>
 				<div class="ethos_item row">
-					<div class="ethos_title col4">Send shorter emails</div>
-					<div class="ethos_desc col8">So people will read them.</div>
+					<div class="ethos_title col4">Use science</div>
+					<div class="ethos_desc col8">Think factually and make use of cutting-edge research.</br></div>
 				</div>
 				<div class="ethos_item row">
-					<div class="ethos_title col4">Don’t be dogmatic</div>
-					<div class="ethos_desc col8">“...you should be excited to have your mind changed and throw things away.” – Jason Fried</div>
+					<div class="ethos_title col4">Send shorter emails</div>
+					<div class="ethos_desc col8">So people will read them.</div>
 				</div>
 					<!-- <div class="ethos_item row">
 						<div class="ethos_title col4"></div>
