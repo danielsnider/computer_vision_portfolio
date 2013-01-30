@@ -104,7 +104,7 @@
 						<div class="left_divider_work_date"></div>
 						<h4 class="work_date">2012</h4>
 						<h2 class="work_title">Contour Finding Algorithm</h2>
-						<p class="work_desc">This algorithm “groups” nearby darkish pixels by a minimum distance. Each group's bounderies (i.e. contour) can be accessed programmatically. Only rectangular contours are supported due to the split and merge implementation style. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
+						<p class="work_desc">This algorithm creates "groups" of high intensity pixels. For example, letters can be grouped into words, or words can be grouped into paragraphs. Then these groups can be accessed programmatically. However, only rectangular group regions are supported because my implementation is based on a basic split and merge algorithm. A better approach would be based on a region growing algorithm. Or just use OpenCV's built-in function called <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
 						<form class="work_form" action="/contour_find" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
 							<label for="file">Upload your own picture:</label>
 							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
@@ -234,7 +234,7 @@
 					</div>
 					<div class="left_col col5">
 						<h2 class="work_title">Quiz It</h2>
-						<p class="work_desc">I needed a better way to learn my German vocabulary homework, so I created a program to perform structured OCR on two columns of text, in the hopes of automatically generating practice tests. The text in the image is converted into a spreadsheet which can be imported into Anki, a self-quizzing tool.</p>
+						<p class="work_desc">I needed a better way to learn my German vocabulary homework, so I created a program to perform structured OCR on two columns of text, in the hope of automatically generating practice tests. The text in the image is converted into a spreadsheet which can be imported into Anki, a self-quizzing tool.</p>
 						<form class="work_form" action="/quiz_it" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
 							<label for="file">Upload your own picture:</label>
 							<input type="file" name="file" style="visibility:hidden;" id="uploadme4" />
