@@ -104,7 +104,7 @@
 						<div class="left_divider_work_date"></div>
 						<h4 class="work_date">2012</h4>
 						<h2 class="work_title">Contour Finding Algorithm</h2>
-						<p class="work_desc">This algorithm creates "groups" high intensity pixels. For example, letters can be grouped into a word region, or words into a paragraph.  Then these group regions can be accessed programmatically. However, only rectangular group regions are supported because the implementation is based on a basic split and merge. A better approach would be based on region growing. Or just use OpenCV's function <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
+						<p class="work_desc">This algorithm creates "groups" of high intensity pixels. For example, letters can be grouped into words, or words into paragraphs and these groups can be accessed programmatically. However, only rectangular group regions are supported because my implementation is based on a basic split and merge algorithm. A better approach would be based on a region growing algorithm. Or just use OpenCV's built-in function called <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
 						<form class="work_form" action="/contour_find" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
 							<label for="file">Upload your own picture:</label>
 							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
