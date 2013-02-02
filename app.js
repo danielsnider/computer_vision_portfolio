@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , restarter = require('./routes/restart')
   , upload = require('./routes/upload')
   , http = require('http')
   , path = require('path');
@@ -38,8 +37,6 @@ app.post('/quiz_it', upload.quiz_it);
 app.post('/empty_wall_space', upload.empty_wall_space);
 app.post('/highlight_ocr', upload.highlight_ocr);
 
-
-app.post('/restart', restarter.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
