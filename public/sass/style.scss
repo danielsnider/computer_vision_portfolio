@@ -110,6 +110,11 @@ $ethos-font: 'Istok Web', sans-serif;
   src: url('/fonts/DINNeuzeitGrotesk-BoldCond-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'github';
+  src: url('/fonts/COLLEGIA.ttf');
+}
+
 $myriad-light-font: 'myriad-light', sans-serif;
 $myriad-semi-font: 'myriad-semi', sans-serif;
 $futura-light-font: 'futura-light', sans-serif;
@@ -123,6 +128,7 @@ $bio-font: 'bio', sans-serif;
 $links-font: 'links', sans-serif;
 $email-font: 'email', sans-serif;
 $work-font: 'work', sans-serif;
+$github-font: 'github', sans-serif;
 
 //--------------------
 //
@@ -302,16 +308,29 @@ a.alink:hover {
     text-decoration: underline;
 }
 
-.git {
-    height: 20px;
-    top: 4px;
-    position: relative;
-    float: right;
-    opacity: .4;
+.try_title {
+    text-align: center;
+    text-decoration: underline;
+    color: $yellow-bg;
 }
 
-.git:hover {
-    opacity: 1;
+.github {
+    // margin: 6px 5px 6px 0px;
+    margin-top: 10px;
+    font-family: $links-font;
+    text-align: center;
+    a {
+        font-family: $github-font;
+    }
+    a:link {
+    color: white;
+    }
+    a:visited {
+        color: white;
+    }
+    a:hover {
+        color: $yellow-bg;
+    }
 }
 
 //--------------------
