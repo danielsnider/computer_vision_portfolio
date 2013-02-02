@@ -30,8 +30,6 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/index.html', routes.indexhtml);
-app.post('/', upload.action);
 app.post('/contour_find', upload.contour_find);
 app.post('/quiz_it', upload.quiz_it);
 app.post('/empty_wall_space', upload.empty_wall_space);

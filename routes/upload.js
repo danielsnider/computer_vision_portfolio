@@ -9,32 +9,19 @@ var exec = require('child_process').exec, child;
 var fs = require("fs");
 var path = require("path");
 
-// maybe we could use async.js to avoid so much callback spaghetti
-exports.action = function(req, res) {
-  //child = exec('cd '+ binaries_path + ' && ./a.out ' + req.files.file.path,
-  process.chdir(binaries_path);
-  if (process.platform == "win32")
-    command = '?.exe';
-  else
-    command = './quizit.out'; //actually this is a linux binary
-  child = exec(command + ' "' + req.files.file.path + '"',
-    function (error, stdout, stderr) {
-      var photo_path = req.files.file.path.split(path.sep);
-      res.render('uploaded', { title: 'QuizIt', face_info: stdout, photo_path: '/uploads/' + photo_path[photo_path.length - 1] });
-      if (error !== null) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        console.log('exec error: ' + error);
-      }
-  });
-};
-
 exports.contour_find = function(req, res) {
   process.chdir(binaries_path);
 
-  var orig_file_name = req.files.file.name;
-  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
-  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  var orig_file_name = '';
+  var new_file_path = '';
+  var new_file_name = '';
+
+  if (req.files.file)
+  {
+    orig_file_name = req.files.file.name;
+    new_file_path = req.files.file.path.split(path.sep); //array of components of filename
+    new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  }
 
   var input_photo = "../public/uploads/" + new_file_name;
   var output_photo = "../public/uploads/" + new_file_name + '-contour_find-processed.jpg';
@@ -62,9 +49,16 @@ exports.contour_find = function(req, res) {
 exports.empty_wall_space = function(req, res) {
   process.chdir(binaries_path);
 
-  var orig_file_name = req.files.file.name;
-  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
-  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  var orig_file_name = '';
+  var new_file_path = '';
+  var new_file_name = '';
+
+  if (req.files.file)
+  {
+    orig_file_name = req.files.file.name;
+    new_file_path = req.files.file.path.split(path.sep); //array of components of filename
+    new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  }
 
   var input_photo = "../public/uploads/" + new_file_name;
   var output_photo = "../public/uploads/" + new_file_name + '-empty_wall_space-processed.jpg';
@@ -92,9 +86,16 @@ exports.empty_wall_space = function(req, res) {
 exports.highlight_ocr = function(req, res) {
   process.chdir(binaries_path);
 
-  var orig_file_name = req.files.file.name;
-  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
-  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  var orig_file_name = '';
+  var new_file_path = '';
+  var new_file_name = '';
+
+  if (req.files.file)
+  {
+    orig_file_name = req.files.file.name;
+    new_file_path = req.files.file.path.split(path.sep); //array of components of filename
+    new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  }
 
   var input_photo = "../public/uploads/" + new_file_name;
   var orig_display_photo = "/uploads/" + new_file_name;
@@ -122,9 +123,16 @@ exports.highlight_ocr = function(req, res) {
 exports.quiz_it = function(req, res) {
   process.chdir(binaries_path);
 
-  var orig_file_name = req.files.file.name;
-  var new_file_path = req.files.file.path.split(path.sep); //array of components of filename
-  var new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  var orig_file_name = '';
+  var new_file_path = '';
+  var new_file_name = '';
+
+  if (req.files.file)
+  {
+    orig_file_name = req.files.file.name;
+    new_file_path = req.files.file.path.split(path.sep); //array of components of filename
+    new_file_name = new_file_path[new_file_path.length - 1]; //just the photo name
+  }
 
   var input_photo = "../public/uploads/" + new_file_name;
   var orig_display_photo = "/uploads/" + new_file_name;
