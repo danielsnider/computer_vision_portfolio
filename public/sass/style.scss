@@ -31,10 +31,6 @@ $yellow-font: black;
 
 $agray: #575757;
 
-$font-nav: 'Istok Web', sans-serif;
-// $font-nav: Arial, Helvetica, sans-serif;
-$ethos-font: 'Istok Web', sans-serif;
-
 @mixin light-scheme {
     background: $light-bg;
     color: $dark-font;
@@ -53,82 +49,44 @@ $ethos-font: 'Istok Web', sans-serif;
 //
 //Fonts
 //
+
 @font-face {
   font-family: 'futura-med';
   src: url('/fonts/Futura Medium BT.ttf');
-}
-@font-face {
-  font-family: 'futura-light';
-  src: url('/fonts/Futura Light BT.ttf');
 }
 @font-face {
   font-family: 'legnsb';
   src: url('/fonts/LEGSNB__.TTF');
 }
 @font-face {
-  font-family: 'legnsw';
-  src: url('/fonts/LEGSNSW_.TTF');
-}
-@font-face {
   font-family: 'myriad-light';
   src: url('/fonts/MyriadPro-LightSemiExt.otf');
-}
-@font-face {
-  font-family: 'myriad-semi';
-  src: url('/fonts/MyriadPro-SemiExt.otf');
-}
-@font-face {
-  font-family: 'sto';
-  src: url('/fonts/STOSFMI_.ttf');
-}
-@font-face {
-  font-family: 'gara';
-  src: url('/fonts/AGaramondPro-Italic.otf');
 }
 @font-face {
   font-family: 'avan';
   src: url('/fonts/AVANGELI.TTF');
 }
-
 @font-face {
   font-family: 'bio';
   src: url('/fonts/bio.otf');
 }
-//ChaparralPro-LightItCapt
-
 @font-face {
   font-family: 'links';
   src: url('/fonts/ChaparralPro-LightCapt.otf');
 }
-@font-face {
-  font-family: 'email';
-  src: url('/fonts/AVANGMB.TTF');
-}
-
-@font-face {
-  font-family: 'work';
-  src: url('/fonts/DINNeuzeitGrotesk-BoldCond-Regular.ttf');
-}
-
 @font-face {
   font-family: 'github';
   src: url('/fonts/COLLEGIA.ttf');
 }
 
 $myriad-light-font: 'myriad-light', sans-serif;
-$myriad-semi-font: 'myriad-semi', sans-serif;
-$futura-light-font: 'futura-light', sans-serif;
 $futura-med-font: 'futura-med', sans-serif;
 $legnsb-font: 'legnsb', sans-serif;
-$legnsw-font: 'legnsw', sans-serif;
-$sto-font: 'sto', sans-serif;
-$gara-font: 'gara', sans-serif;
 $avan-font: 'avan', sans-serif;
 $bio-font: 'bio', sans-serif;
 $links-font: 'links', sans-serif;
-$email-font: 'email', sans-serif;
-$work-font: 'work', sans-serif;
 $github-font: 'github', sans-serif;
+$ethos-font: 'Istok Web', sans-serif;
 
 //--------------------
 //
