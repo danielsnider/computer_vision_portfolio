@@ -85,7 +85,7 @@
 							<span class="slash">/</span>
 							<a class="alink" href="https://twitter.com/danielsnider" target="_blank">Twitter</a>
 							<span class="slash">/</span>
-							<a class="alink" href="https://github.com/danielsnider" target="_blank">Github</a>
+							<a class="alink" href="https://github.com/danielsnider?tab=repositories" target="_blank">Github</a>
 							<span class="slash">/</span>
 							<a class="alink" href="/resume.pdf" target="_blank">Resume</a>
 						</div>
@@ -104,7 +104,7 @@
 						<div class="left_divider_work_date"></div>
 						<h4 class="work_date">2012</h4>
 						<h2 class="work_title">Contour Finding Algorithm</h2>
-						<p class="work_desc">This algorithm creates "groups" of high intensity pixels. For example, letters can be grouped into words, or words can be grouped into paragraphs. Then these groups can be accessed programmatically. However, only rectangular group regions are supported because my implementation is based on a basic split and merge algorithm. A better approach would be based on a region growing algorithm. Or just use OpenCV's built-in function called <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a>.</p>
+						<p class="work_desc">This algorithm creates "groups" of high intensity pixels. For example, letters can be grouped into words, or words can be grouped into paragraphs. Then the locations of groups can be accessed programmatically. However, only rectangular group regions are supported because the implementation is based on a basic split and merge algorithm. A better approach would be based on a region growing algorithm. Or just use OpenCV's built-in function called <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=findcontours#findcontours" target="_blank">findContours</a> to find contours efficiently.</p>
 						<form class="work_form" action="/contour_find" method="post" accept-charset="utf-8" enctype="multipart/form-data" target="_blank">
 							<label for="file">Upload your own picture:</label>
 							<input type="file" name="file" style="visibility:hidden;" id="uploadme" />
@@ -113,11 +113,14 @@
 							<label for="file">Or try the default picture:</label>
 							<input type="submit" value="Continue &rarr;"><br>
 							<label for="sep_dist" class="sep_dist">Minimum pixel distance between objects:</label>
-							<input type="text" name="sep_dist" id="sep_dist" value="25" size="10"><br/>
+							<input type="text" name="sep_dist" id="sep_dist" value="25" size="10">
+							<a href="https://github.com/danielsnider/computer_vision_portfolio">
+								<img class="git" src="/images/git.png">
+							</a>
+							<input type="hidden" name="scan_rate" id="scan_rate" value="1">
 							<!-- <label for="thres">noise tolerance:</label> -->
 							<input type="hidden" name="thres" id="thres" value="0">
 							<!-- <label for="scan_rate">Scanning window step rate:</label> -->
-							<input type="hidden" name="scan_rate" id="scan_rate" value="1">
 						</form>
 					</div>
 
@@ -170,6 +173,9 @@
 							<input type="submit" value="Go &rarr;"><br>
 							<label for="file">Or try the default picture:</label>
 							<input type="submit" value="Continue &rarr;">
+							<a href="https://github.com/danielsnider/computer_vision_portfolio">
+								<img class="git" src="/images/git.png">
+							</a>
 						</form>
 					</div>
 				</div> <!-- work row -->
@@ -192,6 +198,9 @@
 							<input class="rgb" type="text" name="green" id="green" value="226"><br>
 							<label class="rgb" for="blue">Blue:</label>
 							<input class="rgb" type="text" name="blue" id="blue" value="152">
+							<a href="https://github.com/danielsnider/computer_vision_portfolio">
+								<img class="git" src="/images/git.png">
+							</a>
 						</form>
 					</div>
 					<div class="center_col col7">
@@ -242,6 +251,9 @@
 							<input type="submit" value="Go &rarr;"><br>
 							<label for="file">Or try the default picture:</label>
 							<input type="submit" value="Continue &rarr;">
+							<a href="https://github.com/danielsnider/computer_vision_portfolio">
+								<img class="git" src="/images/git.png">
+							</a>
 						</form>
 					</div>
 				</div> <!-- work row -->

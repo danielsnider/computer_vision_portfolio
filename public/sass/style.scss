@@ -301,6 +301,19 @@ a.alink:hover {
 #rgb_title {
     text-decoration: underline;
 }
+
+.git {
+    height: 20px;
+    top: 4px;
+    position: relative;
+    float: right;
+    opacity: .4;
+}
+
+.git:hover {
+    opacity: 1;
+}
+
 //--------------------
 //
 // -skills

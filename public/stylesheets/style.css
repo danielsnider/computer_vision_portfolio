@@ -345,19 +345,33 @@ a.alink:hover {
   text-decoration: underline;
 }
 
-/* line 310, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
+.git {
+  height: 20px;
+  top: 4px;
+  position: relative;
+  float: right;
+  opacity: .4;
+}
+
+/* line 313, ../sass/style.scss */
+.git:hover {
+  opacity: 1;
+}
+
+/* line 323, ../sass/style.scss */
 .skills {
   background: #ffff33;
   color: black;
 }
 
-/* line 314, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .skills_graph {
   margin-bottom: 24px;
   margin-right: 10px;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 .left_divider_skills {
   position: relative;
   width: 2000px;
@@ -369,32 +383,32 @@ a.alink:hover {
   margin-left: -1995px;
 }
 
-/* line 330, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .dates {
   background: #ffff33;
   color: black;
 }
 
-/* line 334, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .dates_section {
   padding: 0 40px 40px 40px;
 }
 
-/* line 338, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .date_title {
   font-family: "avan", sans-serif;
   font-size: 1.875em;
   line-height: 1.6em;
 }
 
-/* line 344, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 .date_desc {
   font-family: "links", sans-serif;
   font-size: 1.25em;
   line-height: 1.2em;
 }
 
-/* line 349, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .left_divider_date {
   position: relative;
   width: 2000px;
@@ -405,7 +419,7 @@ a.alink:hover {
   top: 40px;
 }
 
-/* line 354, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 .date {
   position: relative;
   top: -20px;
@@ -416,20 +430,20 @@ a.alink:hover {
   line-height: 1.6em;
 }
 
-/* line 369, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .ethos {
   background: white;
   color: #2e2e2e;
 }
 
-/* line 373, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .ethos_item {
   padding-bottom: 20px;
   padding: 0 auto;
   border-bottom: 1px solid #e8eef6;
 }
 
-/* line 379, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 .ethos_title {
   font-size: 1.625em;
   line-height: 1.84615em;
@@ -437,7 +451,7 @@ a.alink:hover {
   font-family: "myriad-light", sans-serif;
 }
 
-/* line 385, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 .ethos_desc {
   font-size: 1.125em;
   line-height: 1.33333em;
@@ -445,18 +459,18 @@ a.alink:hover {
   padding: 28px;
 }
 
-/* line 391, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .ethos_item:last-child {
   border-bottom: 0;
 }
 
-/* line 401, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .goals {
   background: white;
   color: #2e2e2e;
 }
 
-/* line 405, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 .x {
   text-align: center;
   font-size: 60px;
@@ -465,7 +479,7 @@ a.alink:hover {
   font-family: times;
 }
 
-/* line 413, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 .goals_title {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -478,19 +492,19 @@ a.alink:hover {
   padding: 15px 0 0 0;
 }
 
-/* line 426, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 .contact {
   background: #2e2e2e;
   color: white;
 }
 
-/* line 430, ../sass/style.scss */
+/* line 443, ../sass/style.scss */
 .contact_logo {
   float: right;
   color: white;
 }
 
-/* line 435, ../sass/style.scss */
+/* line 448, ../sass/style.scss */
 .contact_desc {
   margin-bottom: 20px;
   font-family: "links", sans-serif;
@@ -498,7 +512,7 @@ a.alink:hover {
   line-height: 1.2em;
 }
 
-/* line 441, ../sass/style.scss */
+/* line 454, ../sass/style.scss */
 .action {
   text-transform: uppercase;
   font-family: "futura-med", sans-serif;
@@ -506,77 +520,77 @@ a.alink:hover {
   line-height: 1.2em;
 }
 
-/* line 446, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .action_item {
   padding: 0 12px;
 }
 
-/* line 449, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .action_div {
   opacity: .5;
   font-size: 0.625em;
   line-height: 2.4em;
 }
 
-/* line 454, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .action_sml {
   font-size: 0.3125em;
   line-height: 4.8em;
 }
 
-/* line 458, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 a.left {
   text-align: left;
   margin-left: 10%;
 }
 
-/* line 463, ../sass/style.scss */
+/* line 476, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 467, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 a.right {
   float: right;
   margin-right: 10%;
 }
 
-/* line 472, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 a.action_item:link {
   text-decoration: none;
   color: white;
 }
 
-/* line 476, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 a.action_item:visited {
   text-decoration: none;
   color: white;
 }
 
-/* line 480, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 a.action_item:hover {
   opacity: .5;
 }
 
-/* line 491, ../sass/style.scss */
+/* line 504, ../sass/style.scss */
 .footer {
   background: black;
 }
 
-/* line 495, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 .footer_content {
   text-align: center;
   padding-top: 30px;
 }
 
-/* line 500, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .headshot_img {
   opacity: .7;
   transition: opacity 0.3s ease-out;
   -webkit-transition: opacity 0.3s ease-out;
 }
 
-/* line 505, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 .contact_email {
   font-family: "bio", sans-serif;
   position: relative;
@@ -585,13 +599,13 @@ a.action_item:hover {
   line-height: 1.77778em;
 }
 
-/* line 512, ../sass/style.scss */
+/* line 525, ../sass/style.scss */
 .arrow {
   position: relative;
   top: -65px;
 }
 
-/* line 519, ../sass/style.scss */
+/* line 532, ../sass/style.scss */
 .footer_text {
   color: #d9d9d9;
   margin: 20px auto;
@@ -600,34 +614,34 @@ a.action_item:hover {
   line-height: 2.18182em;
 }
 
-/* line 526, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 .footer_text_cont {
   color: #898989;
 }
 
-/* line 530, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 .headshot_img:hover {
   opacity: 1;
 }
 
-/* line 534, ../sass/style.scss */
+/* line 547, ../sass/style.scss */
 a.contact_email:link {
   text-decoration: none;
   color: white;
 }
 
-/* line 538, ../sass/style.scss */
+/* line 551, ../sass/style.scss */
 a.contact_email:visited {
   text-decoration: none;
   color: white;
 }
 
-/* line 542, ../sass/style.scss */
+/* line 555, ../sass/style.scss */
 a.contact_email:hover {
   opacity: .5;
 }
 
-/* line 553, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 div#navbar {
   height: 40px;
   width: 100%;
@@ -641,7 +655,7 @@ div#navbar {
   z-index: 999;
 }
 
-/* line 565, ../sass/style.scss */
+/* line 578, ../sass/style.scss */
 div#navbar ul {
   margin: 0px;
   padding: 0px;
@@ -651,7 +665,7 @@ div#navbar ul {
   white-space: nowrap;
 }
 
-/* line 574, ../sass/style.scss */
+/* line 587, ../sass/style.scss */
 div#navbar li {
   list-style-type: none;
   display: inline;
@@ -659,7 +673,7 @@ div#navbar li {
   line-height: 1.41176em;
 }
 
-/* line 580, ../sass/style.scss */
+/* line 593, ../sass/style.scss */
 div#navbar li a {
   text-decoration: none;
   padding: 7px 6%;
@@ -672,26 +686,26 @@ div#navbar li a:active, div#navbar li a:focus {
   outline: none;
 }
 
-/* line 586, ../sass/style.scss */
+/* line 599, ../sass/style.scss */
 div#navbar li a:hover {
   font-weight: bold;
   background-color: rgba(211, 211, 211, 0.6);
   /*@include radial-gradient(color-stops(#c00, #00c));*/
 }
 
-/* line 606, ../sass/style.scss */
+/* line 619, ../sass/style.scss */
 .center {
   display: block;
   margin: auto;
 }
 
-/* line 611, ../sass/style.scss */
+/* line 624, ../sass/style.scss */
 a.close {
   color: white;
   text-decoration: underline;
 }
 
-/* line 616, ../sass/style.scss */
+/* line 629, ../sass/style.scss */
 .close {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -702,17 +716,17 @@ a.close {
   font-size: 30px;
 }
 
-/* line 621, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 a.close:hover {
   color: #ffff33;
 }
 
-/* line 625, ../sass/style.scss */
+/* line 638, ../sass/style.scss */
 .result_main {
   border-top: 1px solid #e8eef6;
 }
 
-/* line 629, ../sass/style.scss */
+/* line 642, ../sass/style.scss */
 .result_title {
   padding: 15px 0 10px 0;
   font-size: 4.0625em;
@@ -723,7 +737,7 @@ a.close:hover {
   text-align: center;
 }
 
-/* line 634, ../sass/style.scss */
+/* line 647, ../sass/style.scss */
 .result_text {
   margin: auto 8%;
   padding-bottom: 20px;
@@ -731,7 +745,7 @@ a.close:hover {
   white-space: pre-line;
 }
 
-/* line 642, ../sass/style.scss */
+/* line 655, ../sass/style.scss */
 .result_subtitle {
   padding: 40px 0 10px 0;
   font-size: 2.1875em;
@@ -742,13 +756,13 @@ a.close:hover {
   color: #ffff33;
 }
 
-/* line 650, ../sass/style.scss */
+/* line 663, ../sass/style.scss */
 .result_img {
   width: 70%;
   max-width: 700px;
 }
 
-/* line 655, ../sass/style.scss */
+/* line 668, ../sass/style.scss */
 .close_bottom {
   padding: 30px;
 }
