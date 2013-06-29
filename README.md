@@ -1,6 +1,6 @@
 # Computer Vision Portfolio
 ## Daniel Snider
-### You can try the live project at [www.challengeaccepted.me](http://challengeaccepted.me/)
+### ~~You can try the live project at [www.challengeaccepted.me](http://challengeaccepted.me/)~~
 
 main webpage at /views/index.ejs
 
